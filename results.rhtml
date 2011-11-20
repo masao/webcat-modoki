@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  <title>NACSIS Webcat: kanryaku</title> 
+  <link rel="stylesheet" href="webcat.css" type="text/css">
+ </head>
+  <body bgcolor="#ffffff">
+  <h1>NACSIS Webcat: 簡略表示</h1>
+  <hr>
+  [<a href="http://webcat.nii.ac.jp/help.html">利用の手引き</a>] || [<a href="http://webcat.nii.ac.jp/webcat.html">検索画面に戻る</a>]
+  <hr>
+ 該当件数は <%=h data[ :totalResults ] %> 件です
+ <hr>
+<ol id="webcat-result">
+<% data[ :entries ].each do |entry| %>
+<li><a href = "<%=h entry[ :url ] %>"><%=h entry[ :title ] %><%=h " / #{ entry[ :author ] }" if not entry[ :author ].empty? %></a>. -- <%=h entry[ :publisher ] %><%=h ", #{ entry[ :publicationDate ] }" if entry[ :publicationDate ] and not entry[ :publicationDate ].empty? %><br>
+<% end %>
+</ol>
+<hr>
+[<a href="http://webcat.nii.ac.jp/help.html">利用の手引き</a>] || [<a href="http://webcat.nii.ac.jp/webcat.html">検索画面に戻る</a>]
+<p>
+Copyright(C) 2002 NII ALL RIGHTS RESERVED
+</body>
+</html>
+ 

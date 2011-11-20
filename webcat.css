@@ -1,0 +1,11 @@
+body {
+  background-color: #ffd;
+}
+ol#webcat-result {
+  font-family: monospace;
+  width: 38em;
+  line-height: 1.2;
+}
+ol#webcat-result li {
+  margin-bottom: 1em;
+}
